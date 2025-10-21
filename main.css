@@ -1,25 +1,134 @@
 /* Header */
 
 .container-header{
-background: blue;
-margin:0% 5%;
-padding: 0 25px;
-display: flex;
-align-items: center;
-justify-content: space-between;
+    /* Marge */
+    margin:0% 10%;
+    padding: 0 25px;
+
+    /* Alignement des objets */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 a{
-    text-decoration: none;
+    /* Marge, enlever le soulignage et couleur tu texte */
     padding-left: 10px;
+    text-decoration: none;
     color: gray;
 }
 
 /* Fin du Header */
 
 /* Main */
+/* Slider */
 
 .container-main{
-    background: red;
-    margin: 0% 5%;
+    /* Position et marge */
+    position: relative;
+    margin: 10px 10%;
 }
+
+.titre{
+    /* Position */
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%, -50%);
+
+    /* Taille du texte */
+    font-size: 18px;
+}
+
+.half-circle-left {
+    /* Position */
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+
+    /* Taille */
+    width: 50px;
+    height: 100px;
+    
+    /* Arrondir */
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+
+    /* Couleur de fond */
+    background-color: rgb(68, 66, 66);
+    border: none;
+}
+
+.half-circle-right {
+    /* Position */
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+
+    /* Taille */
+    width: 50px;
+    height: 100px;
+    
+    /* Arrondir */
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+
+    /* Couleur de fond */
+    background-color: rgb(68, 66, 66);
+    border: none;
+}
+
+.fa-solid{
+    /* Couleur */
+    color: white;
+}
+
+.plus-info{
+    /* Position */
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    font-size: 18px;
+    color: white;
+}
+
+.button-info{
+    
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    
+    border-radius: 5px;
+    background-color: skyblue;
+
+    background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 0.2),
+    rgb(0 0 0 / 0.2) 80%,
+    transparent
+  );
+
+    box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 0.6),
+    inset -2px -2px 3px rgb(0 0 0 / 0.6);
+    
+}
+
+.button-info:hover {
+  background-color: red;
+}
+
+.button-style:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 0.6),
+    inset 2px 2px 3px rgb(0 0 0 / 0.6);
+}
+
+/* Fin Slider */
+/* Fin Main */
+
