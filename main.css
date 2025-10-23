@@ -1,55 +1,52 @@
-/* Header */
-
-.container-header{
-    /* Marge */
-    margin:0% 10%;
-    padding: 0 25px;
-
-    /* Alignement des objets */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Réinitialisation de la fenêtre pour enlever les marges */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-a{
+/* Logo et Nav */
+.container-nav{
+   /* Alignement des objets */
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0%;
+    padding: 20px 11% 20px 11%;
+    z-index: 9998;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+header a{
     /* Marge, enlever le soulignage et couleur tu texte */
     padding-left: 10px;
     text-decoration: none;
     color: gray;
 }
+/* Fin Logo et Nav */
 
-/* Fin du Header */
-
-/* Main */
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+       /* Marge */
+    margin: 140px 10%;
+}
 /* Slider */
-
-.container-main{
-    /* Position et marge */
+.slider{
+    /* Position */
     position: relative;
-    margin: 10px 10%;
 }
 
-.titre{
-    /* Position */
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translate(0%, -50%);
-
-    /* Taille du texte */
-    font-size: 18px;
+#image-id{
+    width: 100%;
 }
 
 .half-circle-left {
     /* Position */
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(0%, -50%);
-
-    /* Taille */
-    width: 50px;
-    height: 100px;
+    position:absolute;
     
     /* Arrondir */
     border-bottom-right-radius: 100px;
@@ -63,13 +60,6 @@ a{
 .half-circle-right {
     /* Position */
     position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-100%, -50%);
-
-    /* Taille */
-    width: 50px;
-    height: 100px;
     
     /* Arrondir */
     border-bottom-left-radius: 100px;
@@ -84,22 +74,15 @@ a{
     /* Couleur */
     color: white;
 }
+/* Fin slider */
 
-.plus-info{
-    /* Position */
-    position: absolute;
-    top: 60%;
-    left: 5%;
-    font-size: 18px;
-    color: white;
+h1{
+    color: rgb(86, 162, 248);
 }
 
 .button-info{
-    
     border: 0;
     line-height: 2.5;
-    padding: 0 20px;
-    font-size: 12px;
     text-align: center;
     color: white;
     
@@ -130,5 +113,195 @@ a{
 }
 
 /* Fin Slider */
+
+/* Nos services */
+#our-services{
+    margin-top: 50px;
+}
+
+h2{
+    text-align: center;
+}
+
+.line {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    width: 50%;
+    height: 2px;
+    
+    background: rgb(216, 216, 216);
+}
+
+.small-ball{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -6px);
+    background: skyblue;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    border: solid white;
+}
+
+p{
+    margin: 10px 10px 30px 10px;
+    text-align: justify;
+}
+
+.detailed-services{
+    display: flex;
+    flex-direction: column;
+}
+
+.service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-anime{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    transform: translate(0, -50%);
+}
+
+.fa-sharp{
+    position: relative;
+    top: 72%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: black;
+}
+
+.rotating {
+    -webkit-animation: rotating 2s linear infinite;
+    animation: rotating 2s linear infinite;
+    width: 40px;
+    height: 40px;
+}
+
+@-webkit-keyframes rotating {
+    to{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating {
+    to{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.circle{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: solid rgb(68, 66, 66);
+}
+
+.medium-ball{
+    background: skyblue;
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    border: solid white;
+    
+}
+
+.paragraphe{
+    padding: 10px;
+}
+
+h3{
+    margin-left: 10px;
+}
+
+/* Fin nos services */
 /* Fin Main */
+
+/* Responcive */
+
+@media screen and (max-width:480px) {
+    /* Logo et Nav */
+    header{
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    header a{
+        font-size: 14px;
+    }
+    /* Fin Logo et Nav */
+
+    /* Slider */
+    .half-circle-left {
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, -50%);
+
+        /* Taille */
+        width: 20px;
+        height: 40px;
+    }
+
+    .half-circle-right {
+        top: 50%;
+        left: 100%;
+        transform: translate(-100%, -50%);
+
+        /* Taille */
+        width: 20px;
+        height: 40px;
+    }
+    /* Fin Slider */
+
+    /* Section titre */
+    .titre {
+        /* Position */
+        position: relative; 
+
+        display: flex;
+        flex-direction: column;
+
+        /* Longueur */
+        width: 100%;
+
+        /* Taille de la police */
+        font-size: 10px;
+    }
+
+    h2{
+        font-size: 14px;
+        color: black;
+    }
+
+    .plus-info{
+        /* Position */
+        position: relative;
+    
+        width: 100%;
+
+        font-size: 14px;
+        color: black;
+    }
+
+    .button-info{
+        width: 75px;
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    #feature{
+        width: 100%;
+    }
+
+}
 

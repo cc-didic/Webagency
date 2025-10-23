@@ -10,51 +10,126 @@
 
 <body>
 
-    <div class="container-header">
-        <img src="./asset/webagency_images/logo.png" alt="Logo du site">
+    <!-- Logo et Nav -->
+    <div class="container-nav">
         <header>
+            <img src="./asset/webagency_images/logo.png" alt="Logo du site">
             <nav>
                 <a href="#">Acceuil</a>
-                <a href="#">Services</a>
+                <a href="#our-services">Services</a>
                 <a href="#">Portfolio</a>
                 <a href="#">Contact</a>
             </nav>
         </header>
     </div>
+    <!-- Fin Logo et Nav -->
 
-    
+    <main class="container">
 
-    <main>
+        <!-- Slider -->
+        <section class="slider">
 
-        <div class="container-main">
+            <div class="titre">
+                <h1>WEBAGENCY : </h1>
+                <h2>L'AGENCE DE TOUS VOS PROJETS!</h2>
+            </div>
+
+            <div>
+                <img id="image-id" src="./asset/webagency_images/images/slider/bg1.jpg" alt="Logo du site">
+
+                <button class="half-circle-left" onclick="slider('image-id')"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="half-circle-right" onclick="slider('image-id')"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="plus-info">
+                <p>Vous avez un projet web? La Webagency vous aides à le réaliser.</p>
+                <button class="button-info" type="button">Plus d'info</button>
+            </div>
+
+        </section>
+        <!-- Fin Slider -->
+
+        <!-- Nos services -->
+        <section id="our-services">
             
-            <section>
-
-                <div>
-                    <img id="image-id" src="./asset/webagency_images/images/slider/bg1.jpg" alt="Logo du site" width="100%">
-                </div>
+            <h2>NOS SERVICES</h2>
             
-                <div class="titre">
-                    <h1 style="color:rgb(86, 162, 248) ;">WEBAGENCY <span style="color: white;">: L'AGENCE DE TOUS <br> VOS PROJETS!</span> </h1>
+            <div class="line">
+                <div class="small-ball"></div>
+            </div>
+
+            <p>
+                Chez WebAgency, nous accompagnons entreprises, entrepreneurs et institutions dans
+                la conception et le déploiement de projets digitaux sur-mesure. Notre mission est
+                de transformer vos idées en solutions performantes, durables et orientées résultats.
+            </p>
+
+            <div class="detailed-services">
+                <img id="feature" src="./asset/webagency_images/main-feature.png" alt="Logo du site">
+
+                <div class="service">
+                    <div class="background-anime">
+                        <i class="fa-sharp fa-solid fa-chart-pie"></i>
+                        <div class="rotating">
+                            <div class="circle"></div>
+                            <div class="medium-ball"></div>
+                        </div>
+                    </div>
+
+                    <div class="paragraphe">
+                        <h3>Création de sites web</h3>
+                        <p>
+                            Nous concevons des sites vitrines, institutionnels ou e-commerce modernes,
+                            responsive et optimisés pour transformer vos visiteurs en clients.
+                            Design sur-mesure, performance, sécurité et évolutivité sont au cœur de nos
+                            réalisations.
+                        </p>
+                    </div>
                 </div>
 
-                <div>
-                    <button class="half-circle-left" onclick="slider('image-id')"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="service">
+                    <div class="background-anime">
+                        <i class="fa-sharp fa-solid fa-cubes"></i>
+                        <div class="rotating">
+                            <div class="circle"></div>
+                            <div class="medium-ball"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>Accompagnement & stratégie digitale</h3>
+                        <p>
+                            Nous analysons vos besoins et vous conseillons sur la meilleure stratégie en fonction
+                            de vos objectifs. Positionnement, expérience utilisateur, évolution produit :
+                            nous sommes à vos côtés à chaque étape de votre projet.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div>
-                    <button class="half-circle-right" onclick="slider('image-id')"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="service">
+                    <div class="background-anime">
+                        <i class="fa-sharp fa-solid fa-chart-line"></i>
+                        <div class="rotating">
+                            <div class="circle"></div>
+                            <div class="medium-ball"></div>
+                        </div>
+                    </div>
+ 
+                    <div>
+                        <h3>Optimisation & visibilité</h3>
+                        <p>
+                            Nos experts vous aident à gagner en visibilité grâce à des actions ciblées :
+                            SEO, optimisation technique, performances, analytics… Nous veillons à améliorer
+                            durablement votre présence en ligne.
+                        </p>
+                    </div>
+
                 </div>
 
-                <div class="plus-info">
-                    <p>Vous avez un projet web? La Webagency vous aides à le réaliser.</p>
-                    <button class="button-info" type="button">Plus d'info</button>
-                </div>
-            
-            </section>
-            
-        </div>
+            </div>
 
+        </section>
     </main>
 
     <footer>
