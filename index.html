@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/asset/css/index.css">
     <title>Webagency</title>
     <link rel="icon" href="asset/webagency_images/favicon.ico">
 </head>
 
 <body>
 
-    <!-- Logo et Nav -->
     <div class="container-nav">
         <header>
-            <img src="./asset/webagency_images/logo.png" alt="Logo du site">
-            <nav>
-                <a href="#">Acceuil</a>
-                <a href="#our-services">Services</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contact</a>
+            <!-- Logo -->
+             <div class="logo">
+                <img src="./asset/webagency_images/logo.png" alt="Logo du site">
+             </div>
+            
+             <!-- Navbar -->
+            <nav class="main-menu">
+                <ul class="onglets">
+                    <li><a href="#">Acceuil</a></li>
+                    <li><a href="#our-services">Services</a></li>
+                    <li><a href="#our-projects">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </nav>
         </header>
     </div>
@@ -51,31 +57,40 @@
 
         <!-- Nos services -->
         <section id="our-services">
+            <!-- Titre de la section -->
+            <h2 class="section-title">NOS SERVICES</h2>
             
-            <h2>NOS SERVICES</h2>
-            
+            <!-- Ajout d'une ligne avec une boule au centre -->
             <div class="line">
                 <div class="small-ball"></div>
             </div>
 
+            <!-- Description WebAgency -->
             <p>
                 Chez WebAgency, nous accompagnons entreprises, entrepreneurs et institutions dans
                 la conception et le déploiement de projets digitaux sur-mesure. Notre mission est
                 de transformer vos idées en solutions performantes, durables et orientées résultats.
             </p>
 
-            <div class="detailed-services">
+            <!-- Tous les services-->
+            <div class="all-services">
+
+                <!-- Ajout d'une image -->
                 <img id="feature" src="./asset/webagency_images/main-feature.png" alt="Logo du site">
 
-                <div class="service">
+                
+                <div class="detailed-service">
+
+                    <!-- Ajout d'une animation -->
                     <div class="background-anime">
                         <i class="fa-sharp fa-solid fa-chart-pie"></i>
+                        <div class="circle"></div>
                         <div class="rotating">
-                            <div class="circle"></div>
                             <div class="medium-ball"></div>
                         </div>
                     </div>
 
+                    <!-- Description du service -->
                     <div class="paragraphe">
                         <h3>Création de sites web</h3>
                         <p>
@@ -87,16 +102,19 @@
                     </div>
                 </div>
 
-                <div class="service">
+                <div class="detailed-service">
+
+                    <!-- Ajout d'une animation -->
                     <div class="background-anime">
                         <i class="fa-sharp fa-solid fa-cubes"></i>
+                        <div class="circle"></div>
                         <div class="rotating">
-                            <div class="circle"></div>
                             <div class="medium-ball"></div>
                         </div>
                     </div>
 
-                    <div>
+                    <!-- Description du service -->
+                    <div class="paragraphe">
                         <h3>Accompagnement & stratégie digitale</h3>
                         <p>
                             Nous analysons vos besoins et vous conseillons sur la meilleure stratégie en fonction
@@ -107,16 +125,19 @@
 
                 </div>
 
-                <div class="service">
+                <div class="detailed-service">
+
+                    <!-- Ajout d'une animation -->
                     <div class="background-anime">
                         <i class="fa-sharp fa-solid fa-chart-line"></i>
+                        <div class="circle"></div>
                         <div class="rotating">
-                            <div class="circle"></div>
                             <div class="medium-ball"></div>
                         </div>
                     </div>
  
-                    <div>
+                    <!-- Description du service -->
+                    <div class="paragraphe">
                         <h3>Optimisation & visibilité</h3>
                         <p>
                             Nos experts vous aident à gagner en visibilité grâce à des actions ciblées :
@@ -130,13 +151,58 @@
             </div>
 
         </section>
+        <!-- Fin nos services -->
+
+        <!-- Nos Projets -->
+        <section id="our-projects">
+
+            <!-- Titre de la section -->
+            <h2 class="section-title">NOS PROJETS</h2>
+            
+            <!-- Ajout d'une ligne avec une boule au centre -->
+            <div class="line">
+                <div class="small-ball"></div>
+            </div>
+
+            <!-- Description WebAgency -->
+            <p>
+                Découvrez une sélection de projets que nous avons réalisés pour 
+                nos clients. Chaque création reflète notre exigence en matière 
+                de design, de performance et d’expérience utilisateur. 
+                Nous concevons des solutions digitales sur-mesure, 
+                adaptées aux besoins et aux ambitions de chaque entreprise.
+            </p>
+
+            <div class="all-button-picture">
+                <button class="button-picture" id="all" onclick= "picture(8, this.id)">Tout</button>
+                <button class="button-picture" id="creation" onclick= "picture(8, this.id)">Créations</button>
+                <button class="button-picture" id="corporate" onclick= "picture(8, this.id)">Corporate</button>
+                <button class="button-picture" id="portfolio" onclick= "picture(8, this.id)">Portfolio</button>
+            </div>
+
+            <div class="portfolio">
+                <img id="id_0" class="portfolio-picture" src="./asset/webagency_images/images/portfolio/01.jpg" alt="Logo du site">
+                <img id="id_1" class="portfolio-picture" src="./asset/webagency_images/images/portfolio/02.jpg" alt="Logo du site">
+                <img id="id_2" class="corporate-picture" src="./asset/webagency_images/images/portfolio/03.jpg" alt="Logo du site">
+                <img id="id_3" class="creation-picture" src="./asset/webagency_images/images/portfolio/04.jpg" alt="Logo du site">
+                <img id="id_4" class="corporate-picture" src="./asset/webagency_images/images/portfolio/05.jpg" alt="Logo du site">
+                <img id="id_5" class="portfolio-picture" src="./asset/webagency_images/images/portfolio/06.jpg" alt="Logo du site">
+                <img id="id_6" class="portfolio-picture" src="./asset/webagency_images/images/portfolio/07.jpg" alt="Logo du site">
+                <img id="id_7" class="creation-picture" src="./asset/webagency_images/images/portfolio/08.jpg" alt="Logo du site">
+            </div>
+
+        </section>
+
+        <section class="map">
+            <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12452.748297659384!2d2.280542375983258!3d48.86757310628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66ff002da0511%3A0x3d605025578fd202!2sChaillot%2C%20Paris!5e1!3m2!1sfr!2sfr!4v1761231469166!5m2!1sfr!2sfr" width="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
     </main>
 
     <footer>
 
     </footer>
     <script src="https://kit.fontawesome.com/a73388c5ee.js" crossorigin="anonymous"></script>
-    <script src="./js/slider.js"></script>
+    <script src="./asset/js/script.js"></script>
 
 </body>
 

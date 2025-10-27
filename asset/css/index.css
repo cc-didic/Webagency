@@ -1,32 +1,76 @@
-/* Réinitialisation de la fenêtre pour enlever les marges */
+/*---------------------------------------- Paramètre généraux ----------------------------------------*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Logo et Nav */
 .container-nav{
-   /* Alignement des objets */
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    top:0; left: 0%;
-    padding: 20px 11% 20px 11%;
-    z-index: 9998;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+h1{
+    color: #fff;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+}
+
+span{
+    color: #70abcf;
+    font-size: 1rem;
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+/*------------------------------------ Fin Paramètre généraux ----------------------------------------*/
+
+/*------------------------------------------- HEADER -------------------------------------------------*/
+header{
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+    overflow: hidden;
+    top:0; 
+    left: 0;
+    right: 0;
+    z-index: 5;
 }
 
-
-header a{
-    /* Marge, enlever le soulignage et couleur tu texte */
-    padding-left: 10px;
-    text-decoration: none;
-    color: gray;
+.logo, .main-menu{
+    margin: 20px 0;
 }
+
+.main-menu ul{
+    list-style: none;
+    display: flex;
+}
+
+.main-menu a{
+    color: rgba(0, 0, 0, .6);
+    font-size: 1rem;
+    padding: 30px 20px 30px 10px;
+}
+
+.main-menu a:hover{
+    color: #70abcf;
+    border-top: 3px solid #588baa;
+}
+
+/*--------------------------------------- Fin HEADER -------------------------------------------------*/
+
 /* Fin Logo et Nav */
 
+/* Main */
 .container{
     display: flex;
     flex-direction: column;
@@ -34,9 +78,10 @@ header a{
        /* Marge */
     margin: 140px 10%;
 }
+/* Fin main */
+
 /* Slider */
 .slider{
-    /* Position */
     position: relative;
 }
 
@@ -45,40 +90,34 @@ header a{
 }
 
 .half-circle-left {
-    /* Position */
     position:absolute;
+    top: 50%;
+    left: 0%;
     
-    /* Arrondir */
     border-bottom-right-radius: 100px;
     border-top-right-radius: 100px;
 
-    /* Couleur de fond */
     background-color: rgb(68, 66, 66);
     border: none;
 }
 
 .half-circle-right {
-    /* Position */
     position: absolute;
+    top: 50%;
+    left: 100%;
     
-    /* Arrondir */
     border-bottom-left-radius: 100px;
     border-top-left-radius: 100px;
 
-    /* Couleur de fond */
     background-color: rgb(68, 66, 66);
     border: none;
 }
 
 .fa-solid{
-    /* Couleur */
     color: white;
 }
-/* Fin slider */
 
-h1{
-    color: rgb(86, 162, 248);
-}
+
 
 .button-info{
     border: 0;
@@ -115,12 +154,11 @@ h1{
 /* Fin Slider */
 
 /* Nos services */
-#our-services{
-    margin-top: 50px;
-}
 
-h2{
+.section-title{
+    margin-top: 130px;
     text-align: center;
+    font-size: 18px;
 }
 
 .line {
@@ -138,24 +176,26 @@ h2{
     position: absolute;
     left: 50%;
     transform: translate(-50%, -6px);
-    background: skyblue;
+
     width: 14px;
     height: 14px;
+
+    background: skyblue;
     border-radius: 14px;
     border: solid white;
 }
 
 p{
-    margin: 10px 10px 30px 10px;
+    margin: 10px 0 30px 0;
     text-align: justify;
 }
 
-.detailed-services{
+.all-services{
     display: flex;
     flex-direction: column;
 }
 
-.service{
+.detailed-service{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,12 +213,14 @@ p{
     top: 72%;
     left: 50%;
     transform: translate(-50%, 0);
+
     color: black;
 }
 
 .rotating {
     -webkit-animation: rotating 2s linear infinite;
     animation: rotating 2s linear infinite;
+
     width: 40px;
     height: 40px;
 }
@@ -199,36 +241,64 @@ p{
 
 .circle{
     position: absolute;
+
     width: 40px;
     height: 40px;
+
     border-radius: 40px;
-    border: solid rgb(68, 66, 66);
+    border: solid rgb(129, 128, 128);
 }
 
 .medium-ball{
-    background: skyblue;
     width: 14px;
     height: 14px;
+
+    background: skyblue;
     border-radius: 14px;
     border: solid white;
-    
-}
-
-.paragraphe{
-    padding: 10px;
-}
-
-h3{
-    margin-left: 10px;
 }
 
 /* Fin nos services */
+
+/* Nos projets */
+
+.all-button-picture{
+    display: flex;
+    justify-content: center;
+    background: rgb(224, 224, 224);
+    border-radius: 5px;
+    border: 5px;
+    margin: 0 5px 10px 5px;
+}
+
+.button-picture{
+    border: none;
+    padding: 7px;
+    background: transparent;
+}
+
+.portfolio{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-picture, .corporate-picture, .creation-picture{
+    width: 50%;
+    padding: 5px;
+}
+
+
 /* Fin Main */
 
 /* Responcive */
 
 @media screen and (max-width:480px) {
     /* Logo et Nav */
+    .container-nav{
+    justify-content: center;
+    }
     header{
         flex-direction: column;
         padding: 0;
@@ -243,48 +313,36 @@ h3{
 
     /* Slider */
     .half-circle-left {
-        top: 50%;
-        left: 0%;
-        transform: translate(0%, -50%);
+        transform: translate(0%, -130%);
 
-        /* Taille */
         width: 20px;
         height: 40px;
     }
 
     .half-circle-right {
-        top: 50%;
-        left: 100%;
-        transform: translate(-100%, -50%);
+        transform: translate(-100%, -130%);
 
-        /* Taille */
         width: 20px;
         height: 40px;
     }
-    /* Fin Slider */
-
-    /* Section titre */
+    
     .titre {
-        /* Position */
         position: relative; 
 
         display: flex;
         flex-direction: column;
 
-        /* Longueur */
         width: 100%;
 
-        /* Taille de la police */
         font-size: 10px;
     }
 
-    h2{
+    .titre h2{
         font-size: 14px;
         color: black;
     }
 
     .plus-info{
-        /* Position */
         position: relative;
     
         width: 100%;
@@ -295,9 +353,13 @@ h3{
 
     .button-info{
         width: 75px;
+
         padding: 0 10px;
+
         font-size: 12px;
     }
+
+    /* Fin slider */
 
     #feature{
         width: 100%;
